@@ -49,10 +49,7 @@ if ( !function_exists('WP_Router_load') ) {
 			add_action('init', array('WP_Router_Utility', 'init'), -100, 0);
 			add_action(WP_Router_Utility::PLUGIN_INIT_HOOK, array('WP_Router_Page', 'init'), 0, 0);
 			add_action(WP_Router_Utility::PLUGIN_INIT_HOOK, array('WP_Router', 'init'), 1, 0);
-
-			// Sample page
-			require_once 'WP_Router_Sample.class.php';
-			add_action(WP_Router_Utility::PLUGIN_INIT_HOOK, array('WP_Router_Sample', 'init'), 1, 0);
+            
 		} else {
 			// let the user know prerequisites weren't met
 			add_action('admin_head', array('WP_Router_Utility', 'failed_to_load_notices'), 0, 0);

@@ -256,6 +256,7 @@ class WP_Router extends WP_Router_Utility {
 		foreach ( $this->routes as $id => $route ) {
 			$rules = array_merge($rules, $route->rewrite_rules());
 		}
+		
 		return $rules;
 	}
 
